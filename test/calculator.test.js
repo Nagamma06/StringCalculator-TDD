@@ -69,6 +69,11 @@ suite('Suite 6', () => {
           done();
     }); 
 
+    test('Allow multiple delimiters: //[*][%]\\n1*2%3 should return 6',(done) => { 
+        expect(add("//[*][%]\n1*2%3")).to.equal(6);
+        done();
+    });
+
 });
 
 
