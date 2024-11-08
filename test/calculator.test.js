@@ -11,5 +11,14 @@ suite('Suite 1',() => {
   })
 });
 
+suite('Suite 2',() => {
+    test('should return number itself if single number is passed',(done) => { 
+      expect(add("2")).to.equal(2);
+      done();
+    })
+  });
+
+
+
 
     
