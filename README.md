@@ -1,12 +1,12 @@
-#Incubyte : String Calculator - TDD assessment
+# Incubyte : String Calculator - TDD assessment
 
-## steps to create Nodejs project
+## Create Nodejs project
   ```
       > mkdir stringCalculator-TDD
       > cd stringCalculator-TDD
       > npm init -y
   ```
-## steps to install chai and mocha dependencies
+## Install chai and mocha dependencies for unit test
    ```
      > npm install --save-dev mocha chai
    ```
