@@ -10,6 +10,15 @@ const add = (numbers)=>{
         if(numbers.startsWith('//')){
             const newlineIndex = numbers.indexOf('\n')
             delimiter= numbers.slice(2,newlineIndex);
+            
+            // for Multiple delimiters
+             if(delimiter.length > 1){
+                
+                delimiter = delimiter.split(''); //collect all delimeters
+                delimiter = delimiter.join('|'); // separated by OR (|)
+                //console.log("delimiters " + delimiter)
+              }
+
             numbers = numbers.slice(newlineIndex+1); //As per pattern number array starts after the new line character
         }
         numbers = numbers.split(new RegExp(delimiter)) //creates an array of strings
