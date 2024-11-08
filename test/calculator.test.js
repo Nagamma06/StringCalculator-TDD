@@ -1,6 +1,6 @@
 import { expect } from "chai";
 import { suite, test} from "mocha";
-
+import { add } from "../src/calculator.js";
 
 //TDD
 
