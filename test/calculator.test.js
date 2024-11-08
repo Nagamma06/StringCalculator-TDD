@@ -55,6 +55,14 @@ suite('Suite 4', () => {
     
 });
 
+suite('Suite 5', () => { 
+
+    test('Numbers bigger than 1000 should be ignored, so adding 2 + 1001 = 2',(done)=>{
+        expect(add("2,1001")).to.equal(2);
+        done();
+    })
+});
+
 
 
 
