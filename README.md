@@ -7,7 +7,9 @@
     > npm install
     > npm test
  ```
-    
+## Test results:
+![image](https://github.com/user-attachments/assets/a0e0ce9a-a9ba-45d6-b115-09d617a58d05)
+
   
 ## Create Nodejs project
   ```
