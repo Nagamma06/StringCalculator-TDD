@@ -5,7 +5,13 @@ const add = (numbers)=>{
 
     // for more than one number
     else {
-        const delimiter = "\\n|,";
+        let delimiter = "\\n|,";
+        //for pattern : "//[delimiter]\n[numbers…]"
+        if(numbers.startsWith('//')){
+            const newlineIndex = numbers.indexOf('\n')
+            delimiter= numbers.slice(2,newlineIndex);
+            numbers = numbers.slice(newlineIndex+1); //As per pattern number array starts after the new line character
+        }
         numbers = numbers.split(new RegExp(delimiter)) //creates an array of strings
         const numArray = numbers.map(Number); //converts a string array to a number array
         return numArray.reduce((sum, num) => sum + num, 0); // sum of all numbers
