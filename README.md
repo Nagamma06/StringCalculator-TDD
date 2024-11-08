@@ -10,3 +10,7 @@
    ```
      > npm install --save-dev mocha chai
    ```
+## Run tests
+   ```
+     > npm test
+   ```
