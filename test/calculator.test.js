@@ -47,6 +47,11 @@ suite('Suite 4', () => {
         expect(()=>add("2, -2")).to.throw("negative values not allowed: -2");
         done();
     });
+
+    test('add("2,-2,-3") should throw an error for negative values and show all of them in exception message, seperated by commas ', (done) => {
+        expect(()=>add("2, -2,-3")).to.throw("negative values not allowed: -2,-3");
+        done();
+    });
     
 });
 

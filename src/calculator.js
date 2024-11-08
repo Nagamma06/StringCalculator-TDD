@@ -1,12 +1,12 @@
 const add = (numbers)=>{
     if(numbers.length == 0 ) return 0; // for empty string
     
-    if(numbers.length == 1) return parseInt(numbers); // for onle one number 
+    if(numbers.length == 1) return parseInt(numbers); // for only one number 
 
-    // for more than one number
+    // code for more than one number
     else {
         let delimiter = "\\n|,";
-        //for pattern : "//[delimiter]\n[numbers…]"
+        //code for pattern : "//[delimiter]\n[numbers…]"
         if(numbers.startsWith('//')){
             const newlineIndex = numbers.indexOf('\n')
             delimiter= numbers.slice(2,newlineIndex);
@@ -14,6 +14,11 @@ const add = (numbers)=>{
         }
         numbers = numbers.split(new RegExp(delimiter)) //creates an array of strings
         const numArray = numbers.map(Number); //converts a string array to a number array
+
+        const negativeNumbers = numArray.filter(num => num < 0) // Creates an array of negative numbers
+        if(negativeNumbers.length > 0){
+          throw new Error(`negative values not allowed: ${negativeNumbers.join(',')}`);
+        }
         return numArray.reduce((sum, num) => sum + num, 0); // sum of all numbers
 
     }
