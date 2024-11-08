@@ -1,6 +1,6 @@
 # Incubyte : String Calculator - TDD assessment
 
-## steps to execute the project 
+## Steps to execute the project 
  ```
     > git clone https://github.com/Nagamma06/stringCalculator-TDD.git
     > cd stringCalculator
