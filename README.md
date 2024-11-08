@@ -3,7 +3,7 @@
 ## Steps to execute the project 
  ```
     > git clone https://github.com/Nagamma06/stringCalculator-TDD.git
-    > cd stringCalculator
+    > cd stringCalculator-TDD
     > npm install
     > npm test
  ```
