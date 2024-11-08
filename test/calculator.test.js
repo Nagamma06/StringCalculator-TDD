@@ -27,8 +27,15 @@ suite('Suite 2',() => {
         done();
     });
 
-
   });
+
+  suite('Suite 3',() => {
+    test('should handle new line between the numbers',(done) => {
+        expect(add("2\n2,3")).to.equal(7);
+        done();
+    });
+
+});
 
 
 
