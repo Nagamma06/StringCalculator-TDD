@@ -42,6 +42,14 @@ suite('Suite 2',() => {
 
 });
 
+suite('Suite 4', () => {
+    test('add("2,-2") should throw an error for negative value', (done) => {
+        expect(()=>add("2, -2")).to.throw("negative values not allowed: -2");
+        done();
+    });
+    
+});
+
 
 
 
