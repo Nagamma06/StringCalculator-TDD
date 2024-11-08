@@ -19,7 +19,8 @@ const add = (numbers)=>{
         if(negativeNumbers.length > 0){
           throw new Error(`negative values not allowed: ${negativeNumbers.join(',')}`);
         }
-        return numArray.reduce((sum, num) => sum + num, 0); // sum of all numbers
+        // ignore number which is greater than 1000
+        return numArray.filter(num => num <= 1000).reduce((sum, num) => sum + num, 0); // sum of all numbers
 
     }
 }
