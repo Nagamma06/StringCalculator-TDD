@@ -35,7 +35,14 @@ suite('Suite 2',() => {
         done();
     });
 
+    test('should handle different delimiters', (done) => {
+        expect(add("//;\n2;3")).to.equal(5);
+        done();
+    });
+
 });
+
+
 
 
 
