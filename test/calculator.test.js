@@ -63,7 +63,13 @@ suite('Suite 5', () => {
     })
 });
 
+suite('Suite 6', () => {
+    test('Delimiters can be of any length with the following format: //[delimiter]\\n',(done) => {
+          expect(add("//[***]\n1***2***3")).to.equal(6);
+          done();
+    }); 
 
+});
 
 
 
