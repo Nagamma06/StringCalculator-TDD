@@ -13,24 +13,20 @@ const add = (numbers)=>{
             
             // for Multiple delimiters
              if(delimiter.length > 1){
-                
-                delimiter = delimiter.split(''); //collect all delimeters
+                 delimiter = delimiter.split(''); //collect all delimeters
                 delimiter = delimiter.join('|'); // separated by OR (|)
-                //console.log("delimiters " + delimiter)
               }
 
             numbers = numbers.slice(newlineIndex+1); //As per pattern number array starts after the new line character
         }
         numbers = numbers.split(new RegExp(delimiter)) //creates an array of strings
         const numArray = numbers.map(Number); //converts a string array to a number array
-
         const negativeNumbers = numArray.filter(num => num < 0) // Creates an array of negative numbers
         if(negativeNumbers.length > 0){
           throw new Error(`negative values not allowed: ${negativeNumbers.join(',')}`);
         }
         // ignore number which is greater than 1000
         return numArray.filter(num => num <= 1000).reduce((sum, num) => sum + num, 0); // sum of all numbers
-
     }
 }
 
