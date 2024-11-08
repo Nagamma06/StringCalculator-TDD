@@ -16,6 +16,18 @@ suite('Suite 2',() => {
       expect(add("2")).to.equal(2);
       done();
     })
+
+    test('add("2,2") should return 4', (done) => {
+        expect(add("2,2")).to.be.equal(4);
+        done();
+    });
+
+    test('add("2,4,6") should return 12', (done) => {
+        expect(add("2,4,6")).to.be.equal(12);
+        done();
+    });
+
+
   });
 
 
