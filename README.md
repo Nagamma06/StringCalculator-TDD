@@ -1,5 +1,14 @@
 # Incubyte : String Calculator - TDD assessment
 
+## steps to execute the project 
+ ```
+    > git clone https://github.com/Nagamma06/stringCalculator-TDD.git
+    > cd stringCalculator
+    > npm install
+    > npm test
+ ```
+    
+  
 ## Create Nodejs project
   ```
       > mkdir stringCalculator-TDD
